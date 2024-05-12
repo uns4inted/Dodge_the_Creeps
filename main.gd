@@ -29,6 +29,7 @@ func _on_mob_timer_timeout():
 	
 	# set random location on Path2d
 	var mob_spawn_location = $MobPath/MobSpawnLocation;
+	mob_spawn_location.progress_ratio = randf();
 	
 	# set mob's direction perpendicular to the path direction
 	var direction = mob_spawn_location.rotation + PI / 2;
