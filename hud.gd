@@ -17,6 +17,7 @@ func show_game_over():
 	
 	await get_tree().create_timer(1.0).timeout;
 	$StartButton.show();
+	$PressToPlay.show();
 
 func update_score(score):
 	$ScoreLabel.text = str(score);
@@ -33,6 +34,7 @@ func _process(delta):
 
 func _on_start_button_pressed():
 	$StartButton.hide();
+	$PressToPlay.hide();
 	start_game.emit();
 
 
